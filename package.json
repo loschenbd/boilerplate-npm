@@ -1,11 +1,15 @@
 {
+	"homepage": "https://loschenbd.github.io/npm-boilerplate",
 	"name": "fcc-learn-npm-package-json",
 	"author": "Benjamin Loschen",
 	"dependencies": {
-		"express": "^4.14.0"
+		"express": "^4.14.0",
+		"gh-pages": "^3.1.0"
 	},
 	"main": "server.js",
 	"scripts": {
+		"predeploy": "yarn run build",
+		"deploy": "gh-pages -d build",
 		"start": "node server.js"
 	},
 	"engines": {
